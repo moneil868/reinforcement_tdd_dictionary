@@ -13,7 +13,6 @@ class TestDictionary < MiniTest::Test
   end
 
   def test_add_entry_with_keyword_and_definition
-    skip
     @d.add('fish' => 'aquatic animal')
     assert_equal({'fish' => 'aquatic animal'}, @d.entries)
     assert_equal ['fish'], @d.keywords

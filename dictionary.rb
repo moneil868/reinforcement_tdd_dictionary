@@ -1,7 +1,8 @@
 class Dictionary
 
   def initialize
-    @entries = ""
+    @entries = []
+
   end
 
   def empty_on_creation
@@ -10,5 +11,14 @@ class Dictionary
   def entries
     @entries
   end
+
+  def add(hash)
+    @entries = hash
+  end
+
+  def keywords
+    @entries.keys
+  end
+
 
 end
