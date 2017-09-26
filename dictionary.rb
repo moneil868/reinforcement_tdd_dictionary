@@ -3,7 +3,6 @@ class Dictionary
 
   def initialize
     @entries = {}
-
   end
 
   def empty_on_creation
@@ -27,5 +26,8 @@ class Dictionary
     @entries.keys
   end
 
+  def include?(item)
+    @entries.include?(item)
+  end
 
 end

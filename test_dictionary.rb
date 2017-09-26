@@ -25,7 +25,6 @@ class TestDictionary < MiniTest::Test
   end
 
   def test_check_if_keyword_exists
-    skip
     # refute asserts falsy, !assert
     refute @d.include?('fish')
   end
