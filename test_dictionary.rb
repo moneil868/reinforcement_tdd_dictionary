@@ -19,7 +19,6 @@ class TestDictionary < MiniTest::Test
   end
 
   def test_add_keywords_without_definition
-    skip
     @d.add('fish')
     assert_equal({'fish' => nil}, @d.entries)
     assert_equal ['fish'], @d.keywords

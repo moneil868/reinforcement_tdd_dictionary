@@ -2,7 +2,7 @@ require 'pry'
 class Dictionary
 
   def initialize
-    @entries = []
+    @entries = {}
 
   end
 
@@ -14,7 +14,13 @@ class Dictionary
   end
 
   def add(hash)
-    @entries = hash
+    if hash.class == Hash
+      key = hash.keys.first
+      value = hash.values.first
+      @entries[key] = value
+    else
+      @entries[hash] = nil
+    end
   end
 
   def keywords
