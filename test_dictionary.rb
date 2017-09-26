@@ -37,31 +37,26 @@ class TestDictionary < MiniTest::Test
   end
 
   def test_does_not_include_prefix
-    skip
     @d.add('fish')
     refute @d.include?('fi')
   end
 
   def test_does_not_find_word_in_empty_dictionary
-    skip
     assert_empty @d.find('fi')
   end
 
   def test_finds_nothing_if_prefix_matches_nothing
-    skip
     @d.add('fiend')
     @d.add('great')
     assert_empty @d.find('nothing')
   end
 
   def test_finds_entry
-    skip
     @d.add('fish' => 'aquatic animal')
     assert_equal({'fish' => 'aquatic animal'}, @d.find('fish'))
   end
 
   def test_finds_multiple_matches_from_prefix_and_returns_entire_entry
-    skip
     @d.add('fish' => 'aquatic animal')
     @d.add('fiend' => 'wicked person')
     @d.add('great' => 'remarkable')
@@ -69,7 +64,6 @@ class TestDictionary < MiniTest::Test
   end
 
   def test_lists_words_alphabetically
-    skip
     @d.add('zebra' => 'African land animal with stripes')
     @d.add('fish' => 'aquatic animal')
     @d.add('apple' => 'fruit')

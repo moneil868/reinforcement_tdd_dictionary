@@ -1,4 +1,3 @@
-require 'pry'
 class Dictionary
 
   def initialize
@@ -23,11 +22,16 @@ class Dictionary
   end
 
   def keywords
-    @entries.keys
+    @entries.keys.sort_by { |key, val| key }
   end
 
   def include?(item)
     @entries.include?(item)
   end
+
+  def find(item)
+    @entries.select{|k, v| k.include? item}
+  end
+
 
 end
