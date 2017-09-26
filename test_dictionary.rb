@@ -30,7 +30,6 @@ class TestDictionary < MiniTest::Test
   end
 
   def test_check_if_keyword_exists_after_add
-    skip
     refute @d.include?('fish') # if the method is empty, this test passes
     @d.add('fish')
     assert @d.include?('fish') # confirms that it actually checks
